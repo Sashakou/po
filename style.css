@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Mono:300,400,500,700');
+*{
+	cursor: url(cursor1x.png) 6 6,default;
+	font-family: 'IBM Plex Mono', monospace;
+}
+#style::-webkit-scrollbar-track{
+		background-color: #5C5C5C;
+}
+#style::-webkit-scrollbar{
+		width: 8px;
+		background-color: #FFDD00;
+	}
+#style::-webkit-scrollbar-thumb{
+		border-radius: 10px;
+		
+		background-color: #adadad;
+}
+a{
+	cursor: url(cursor-fill1x.png) 6 6,default;
+}
+
+	h1{
+		position: fixed;
+	    top: 10%;
+	    left: 6%;
+	    font-size: 7vw;
+		font-weight: 700;
+		-webkit-transition: all .3s linear;
+		-o-transition: all .3s linear;
+		transition: all .3s linear;
+	}
+		h1 .text{
+			position: relative;
+    		display: block;
+    		overflow: hidden;
+    		font-weight: 700;
+		}
+	.block_about{
+	    position: absolute;
+	    top: 100vh;
+	    left: 50%;
+	    right: 10%;
+	    padding-bottom: 34vh;
+	    -webkit-transition: all .3s linear;
+	    -o-transition: all .3s linear;
+	    transition: all .3s linear;
+	}	
+		.block_about p{
+			line-height: 180%;
+		}
+			.block_about p:first-child{
+				font-weight: 600;
+				font-size: 24px;
+			}
+			.block_about p:thn-child(2){
+				margin: 20px 0 20px 0;
+				font-weight: 400;
+				font-size: 16px;
+			}
+			.block_about p:last-child{
+				font-weight: 400;
+				font-size: 16px;
+			}
+.animate{
+	-webkit-animation:animate 1.2s cubic-bezier(.2,.6,.2,1);
+	animation:animate 1.2s cubic-bezier(.2,.6,.2,1);
+	-webkit-animation-fill-mode:backwards;
+	animation-fill-mode:backwards}
+	@-webkit-keyframes animate{
+		0%{-webkit-transform:translateY(100%)}
+		100%{-webkit-transform:translateY(0)}}
+		@keyframes animate{
+			0%{-webkit-transform:translateY(100%);transform:translateY(100%)}
+			100%{-webkit-transform:translateY(0);transform:translateY(0)}}
+.delay{
+	-webkit-animation-delay:.3s;
+	animation-delay:.3}
+
+@media screen and (max-width: 667px){
+	.block_about {
+	    left: 0;
+	    right: 0;
+	    background: #fff;
+	    padding: 10%;
+	}
+	h1{
+	    font-size: 16vw;
+	}
+}	
